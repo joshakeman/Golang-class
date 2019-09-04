@@ -4,8 +4,8 @@ import "fmt"
 
 type hotdog int
 
-var x = 42 hotdog
+var x hotdog
 
 func main() {
-	fmt.printf("%T\t",x)
+	fmt.Printf("%v\t%T\t", x, x)
 }
