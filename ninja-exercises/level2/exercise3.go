@@ -2,11 +2,12 @@ package main
 
 import "fmt"
 
-const (
-	a     = 42
-	b int = 43
-)
-
 func main() {
-	fmt.Println(a, b)
+
+	x := map[string]int{
+		"Guy":       44,
+		"Other guy": 2,
+	}
+
+	fmt.Println(x["Guy"])
 }
