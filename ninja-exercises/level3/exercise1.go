@@ -2,22 +2,21 @@ package main
 
 import "fmt"
 
-// var a [5]int
-
 func main() {
-	x := []int{42, 43, 44, 45, 46, 47, 48, 49, 50, 51}
 
-	x = append(x, 52)
+	z := struct {
+		first     string
+		friends   map[string]int
+		favDrinks []string
+	}{
+		first: "Josh",
+		friends: map[string]int{
+			"guy": 22,
+			"g":   55,
+			"s":   333,
+		},
+		favDrinks: []string{"coke", "water"},
+	}
 
-	fmt.Println(x)
-
-	x = append(x, 53, 54, 55)
-
-	fmt.Println(x)
-
-	y := []int{56, 57, 58, 59, 60}
-
-	x = append(x, y...)
-
-	fmt.Println(x)
+	fmt.Println(z)
 }
