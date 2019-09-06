@@ -1,22 +1,16 @@
 package main
 
-import "fmt"
+import (
+	"fmt"
+	"runtime"
+)
 
 func main() {
 
-	z := struct {
-		first     string
-		friends   map[string]int
-		favDrinks []string
-	}{
-		first: "Josh",
-		friends: map[string]int{
-			"guy": 22,
-			"g":   55,
-			"s":   333,
-		},
-		favDrinks: []string{"coke", "water"},
-	}
+	fmt.Println("OS\t", runtime.GOOS)
+	fmt.Println("ARCH\t", runtime.GOARCH)
+	fmt.Println("CPUs\t", runtime.NumCPU())
+	fmt.Println("Goroutines\t", runtime.NumGoroutine())
 
-	fmt.Println(z)
 }
+//
